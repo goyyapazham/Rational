@@ -97,27 +97,18 @@ public class Rational {
 	if (d1 > d2) return 1;
 	return -1;
     }
+
+    public boolean equals(Rational r) {
+	boolean retVal = this == r;
+	if ( !retVal ) {
+	    retVal = r instanceof Rational
+		&& this.num == ( ((Rational)r).num )
+		&& this.den == ( ((Rational)r).den );
+	}
+	return retVal;
+    }
     
     public static void main(String[] args) {
-	/*
-	//System.out.println("Hello World");
-	//System.out.println("this is testing for my piazza post");
-	Rational olivia = new Rational() ;
-	System.out.println(olivia);
-	Rational Nancy = new Rational (1,7);
-	System.out.println(Nancy);
-	Rational Kimye = new Rational (0,0); 
-	System.out.println(Kimye);
-	System.out.println(olivia.floatValue());
-	System.out.println(Nancy.floatValue());
-	System.out.println(Kimye.floatValue());
-	Rational r = new Rational(2,3); //Stores the rational number 2/3
-	Rational s = new Rational(1,2); //Stores the rational number 1/2
-	r.multiply(s); //Multiplies r by s, changes r to 2/6.
-        System.out.println(r); //should print 2/6
-        r.divide(s); //Divides r by s, changes r to 4/3
-        System.out.println(r); //should print 4/3
-	*/
 
 	Rational r = new Rational();
 	Rational s = new Rational(8, 18);
@@ -137,6 +128,8 @@ public class Rational {
 	System.out.println(t);
 	System.out.println("Rational v:");
 	System.out.println(v);
+	System.out.println("Rational w:");
+	System.out.println(w);
 	
 	System.out.println("--------------------------------");
 
@@ -236,6 +229,28 @@ public class Rational {
 	System.out.print(t.compareTo(s) + "\n\n");
 
         System.out.println("--------------------------------");
+
+	System.out.println("Testing equals():");
+
+	System.out.println("Rational r:");
+	System.out.println(r);
+	System.out.println("Rational s:");
+	System.out.println(s);
+	
+	System.out.println("Rational r equals s:");
+	System.out.println(r.equals(s));
+
+	System.out.println();
+
+	System.out.println("Rational v:");
+	System.out.println(v);
+	System.out.println("Rational w:");
+	System.out.println(w);
+
+	System.out.println("Rational v equals w:");
+	System.out.println(v.equals(w));
+
+        
 	
     }
   
