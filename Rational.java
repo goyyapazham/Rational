@@ -250,8 +250,6 @@ public class Rational {
 	System.out.println("Rational v equals w:");
 	System.out.println(v.equals(w));
 
-        
-	
     }
   
 }
