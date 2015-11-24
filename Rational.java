@@ -115,6 +115,7 @@ public class Rational {
 	Rational t = new Rational(4, 6);
 	Rational v = new Rational(7, 21);
 	Rational w = new Rational(7, 21);
+	Rational x = new Rational(7, 21);
 
 	System.out.println("--------------------------------");
 	
@@ -242,13 +243,13 @@ public class Rational {
 
 	System.out.println();
 
-	System.out.println("Rational v:");
-	System.out.println(v);
 	System.out.println("Rational w:");
 	System.out.println(w);
+	System.out.println("Rational x:");
+	System.out.println(x);
 
-	System.out.println("Rational v equals w:");
-	System.out.println(v.equals(w));
+	System.out.println("Rational w equals x:");
+	System.out.println(w.equals(x));
 
     }
   
