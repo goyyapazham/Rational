@@ -1,7 +1,7 @@
-//Team Pumpkin Spice Latte -- Olivia Gallager and Nalanda Sharadjaya
+//Team David -- David Merlinsky and Nalanda Sharadjaya
 //APCS1 pd9
-//HW33 -- Do You Even Add, Bro?
-//2015-11-19
+//HW37 -- Rational Equality
+//2015-11-24
 
 public class Rational {
 
