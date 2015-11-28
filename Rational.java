@@ -91,21 +91,16 @@ public class Rational {
        the other we are essentially finding the lcm of both denominators */
 
     public int compareTo(Rational r) {
-	double d1 = floatValue();
-	double d2 = r.floatValue();
-	if (d1 == d2) return 0;
-	if (d1 > d2) return 1;
+	int gcd = gcd(den, r.den);
+	int x = den / gcd;
+	int y = r.den / gcd;
+	if (num * y > r.num * x) return 1;
+	if (num * y == r.num * x) return 0;
 	return -1;
     }
 
     public boolean equals(Rational r) {
-	boolean retVal = this == r;
-	if ( !retVal ) {
-	    retVal = r instanceof Rational
-		&& this.num == ( ((Rational)r).num )
-		&& this.den == ( ((Rational)r).den );
-	}
-	return retVal;
+	return compareTo(r) == 0;
     }
     
     public static void main(String[] args) {
